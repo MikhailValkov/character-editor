@@ -1,0 +1,25 @@
+.Input-Wrapper {
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+.Input-Label {
+  display: block;
+  margin: 5px;
+  text-align: center;
+}
+
+.Input-Field {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 1.5rem;
+  padding: 5px;
+  width: 100%;
+  text-align: center;
+  /* margin: 5px; */
+  width: calc(100% - 12px);
+}
+
+.Input-Field__disabled {
+  pointer-events: none;
+}
