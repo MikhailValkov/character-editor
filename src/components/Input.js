@@ -34,7 +34,6 @@ function Input({
 }
 
 function replaceAnyNonDigitSymbols(e) {
-  console.log("trigged for clean input");
   e.target.value = e.target.value.replaceAll(/\D/gm, "");
 }
 
