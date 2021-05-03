@@ -12,7 +12,7 @@ function Frame({ children, title }) {
 }
 
 Frame.propTypes = {
-  children: PropTypes.element.isRequired,
+  children: PropTypes.node.isRequired, //elements.isRequired,
   title: PropTypes.string,
 };
 
