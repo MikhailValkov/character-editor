@@ -3,7 +3,15 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 import "../styles/Input.css";
 
-function Input({ label, type, size, isDisabled, value, onChangeHandler }) {
+function Input({
+  label,
+  type,
+  size,
+  isDisabled,
+  defaultValue,
+  value,
+  onChangeHandler,
+}) {
   return (
     <div className="Input-Wrapper">
       <span className="Input-Label">{label}</span>
@@ -16,15 +24,17 @@ function Input({ label, type, size, isDisabled, value, onChangeHandler }) {
           type === "number" ? (e) => replaceAnyNonDigitSymbols(e) : undefined
         }
         min={type && "1"}
+        defaultValue={defaultValue && defaultValue}
         value={value && value}
         size={size && size}
-        onChange={(e) => onChangeHandler(e.target.value.replaceAll(/\D/gm, ""))}
+        onChange={(e) => onChangeHandler(e.target.value)}
       />
     </div>
   );
 }
 
 function replaceAnyNonDigitSymbols(e) {
+  console.log("trigged for clean input");
   e.target.value = e.target.value.replaceAll(/\D/gm, "");
 }
 
@@ -33,7 +43,8 @@ Input.propTypes = {
   type: PropTypes.string,
   size: PropTypes.number,
   isEditabele: PropTypes.bool,
-  value: PropTypes.number,
+  defaultValue: PropTypes.any,
+  value: PropTypes.any,
   onChangeHandler: PropTypes.func,
 };
 
