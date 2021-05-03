@@ -220,7 +220,7 @@ function App() {
         </div>
       </Frame>
 
-      <Frame title="Скилы:">
+      <Frame>
         <div className="App-Skills">
           <Skill
             name="attack"
