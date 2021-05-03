@@ -1,0 +1,26 @@
+.Skill-Point {
+  margin: 10px;
+  transform: scale(1.2);
+}
+
+.Skill-Points {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.Skill-Point_disabled {
+  pointer-events: none;
+  opacity: 0.2;
+}
+
+.Skill-Label {
+  display: block;
+  text-align: center;
+  margin: 5px;
+  font-weight: bolder;
+}
+
+.Skill-Wrapper {
+  margin-bottom: 0.5rem;
+}
