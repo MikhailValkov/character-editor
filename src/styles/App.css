@@ -18,3 +18,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
+
+.App-Skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}

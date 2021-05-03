@@ -5,18 +5,32 @@ import "../styles/App.css";
 import Frame from "./Frame";
 import Button from "./Button";
 import Input from "./Input";
+import Skill from "./Skill";
 
 function App() {
   let [state, setState] = useState({
-    charName: "Авантюрист",
-    strength: 1,
-    dexterity: 1,
-    intelligence: 1,
-    charisma: 1,
-    vitality: 4,
-    currentVitality: 4,
-    evasion: 11,
-    energy: 2,
+    charName: "Авантюрист", //имя персонажа
+    strength: 1, // сила
+    dexterity: 1, // ловкость
+    intelligence: 1, // интеллект
+    charisma: 1, // харизма
+    vitality: 4, // жизненная сила максимум
+    currentVitality: 4, // жизненная сила текущая
+    evasion: 11, // уклонение
+    energy: 2, // энергия
+    skills: {
+      // скилы
+      attack: 0, // атака
+      steals: 0, // скрытность
+      archery: 0, // стрельба из лука
+      learnability: 0, // обучаемость
+      survival: 0, // выживание
+      medicine: 0, // медицина
+      intimidation: 0, // запугивание
+      discernment: 0, // пронициательность
+      appearance: 0, // внешний вид
+      manipulation: 0, // манипулирование
+    },
   });
 
   function updateStateFromFile(newState) {
@@ -74,6 +88,22 @@ function App() {
       ...state,
       charisma: parseInt(value),
     }));
+  }
+
+  function changeSkillHandler({ name, level }) {
+    setState((state) => ({
+      ...state,
+      skills: {
+        ...state.skills,
+        [name]: level,
+      },
+    }));
+    // setState((state) => ({
+    //   ...state,
+    //   state.skills:{
+    //   ...state.skills,
+    //   name: level,
+    // }));
   }
 
   function slapHandler() {
@@ -197,7 +227,78 @@ function App() {
       </Frame>
 
       <Frame title="Скилы:">
-        <div className="App-Skills"></div>
+        <div className="App-Skills">
+          <Skill
+            name="attack"
+            label="Атака"
+            baseStat={state.strength}
+            value={state.skills.attack}
+            onChangeHandler={changeSkillHandler}
+          />
+          <Skill
+            name="steals"
+            label="Скрытность"
+            baseStat={state.dexterity}
+            value={state.skills.steals}
+            onChangeHandler={changeSkillHandler}
+          />
+          <Skill
+            name="archery"
+            label="Стрельба из лука"
+            baseStat={state.dexterity}
+            value={state.skills.archery}
+            onChangeHandler={changeSkillHandler}
+          />
+          <Skill
+            name="learnability"
+            label="Обучаемость"
+            baseStat={state.intelligence}
+            value={state.skills.learnability}
+            onChangeHandler={changeSkillHandler}
+          />
+          <Skill
+            name="survival"
+            label="Выживание"
+            baseStat={state.intelligence}
+            value={state.skills.survival}
+            onChangeHandler={changeSkillHandler}
+          />
+          <Skill
+            name="medicine"
+            label="Медицина"
+            baseStat={state.intelligence}
+            value={state.skills.medicine}
+            onChangeHandler={changeSkillHandler}
+          />
+          <Skill
+            name="intimidation"
+            label="Запугивание"
+            baseStat={state.charisma}
+            value={state.skills.intimidation}
+            onChangeHandler={changeSkillHandler}
+          />
+          <Skill
+            name="discernment"
+            label="Пронициательность"
+            baseStat={state.charisma}
+            value={state.skills.discernment}
+            onChangeHandler={changeSkillHandler}
+          />
+          <Skill
+            name="appearance"
+            label="Внешний вид"
+            baseStat={state.charisma}
+            value={state.skills.appearance}
+            onChangeHandler={changeSkillHandler}
+          />
+          <Skill
+            name="manipulation"
+            label="Манипулирование"
+            baseStat={state.charisma}
+            value={state.skills.manipulation}
+            onChangeHandler={changeSkillHandler}
+          />
+        </div>
       </Frame>
     </div>
   );
