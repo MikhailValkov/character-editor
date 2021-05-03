@@ -98,12 +98,6 @@ function App() {
         [name]: level,
       },
     }));
-    // setState((state) => ({
-    //   ...state,
-    //   state.skills:{
-    //   ...state.skills,
-    //   name: level,
-    // }));
   }
 
   function slapHandler() {
