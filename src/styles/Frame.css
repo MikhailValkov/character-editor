@@ -1,9 +1,10 @@
 .Frame {
-  margin: 0.5rem;
+  margin: 1rem;
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  background-color: rgba(240, 240, 240, 0.5);
 }
 
 .Frame-Title {
