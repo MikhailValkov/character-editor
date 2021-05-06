@@ -10,14 +10,14 @@ import Skill from "./Skill";
 function App() {
   let [state, setState] = useState({
     charName: "Авантюрист", //имя персонажа
-    strength: 1, // сила
-    dexterity: 1, // ловкость
-    intelligence: 1, // интеллект
-    charisma: 1, // харизма
-    vitality: 4, // жизненная сила максимум
-    currentVitality: 4, // жизненная сила текущая
-    evasion: 11, // уклонение
-    energy: 2, // энергия
+    strength: 0, // сила
+    dexterity: 0, // ловкость
+    intelligence: 0, // интеллект
+    charisma: 0, // харизма
+    vitality: 0, // жизненная сила максимум
+    currentVitality: 0, // жизненная сила текущая
+    evasion: 0, // уклонение
+    energy: 0, // энергия
     skills: {
       // скилы
       attack: 0, // атака
