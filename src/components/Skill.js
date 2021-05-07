@@ -3,6 +3,15 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 import "../styles/Skill.css";
 
+const skillLevels = [
+  "Нетренированный",
+  "Новичок",
+  "Ученик",
+  "Адепт",
+  "Эксперт",
+  "Мастер",
+];
+
 function Skill({ baseStat, name, label, onChangeHandler, value }) {
   let items = [];
 
@@ -30,7 +39,11 @@ function Skill({ baseStat, name, label, onChangeHandler, value }) {
 
   return (
     <div className={"Skill-Wrapper"}>
-      <span className={"Skill-Label"}>{label}</span>
+      <span className={"Skill-Label"}>
+        {label}
+        <hr />
+        {skillLevels[value]}
+      </span>
       <div className={"Skill-Points"}>{items}</div>
     </div>
   );

@@ -224,70 +224,70 @@ function App() {
         <div className="App-Skills">
           <Skill
             name="attack"
-            label="Атака"
+            label="Атака:"
             baseStat={state.strength}
             value={state.skills.attack}
             onChangeHandler={changeSkillHandler}
           />
           <Skill
             name="steals"
-            label="Скрытность"
+            label="Скрытность:"
             baseStat={state.dexterity}
             value={state.skills.steals}
             onChangeHandler={changeSkillHandler}
           />
           <Skill
             name="archery"
-            label="Стрельба из лука"
+            label="Стрельба из лука:"
             baseStat={state.dexterity}
             value={state.skills.archery}
             onChangeHandler={changeSkillHandler}
           />
           <Skill
             name="learnability"
-            label="Обучаемость"
+            label="Обучаемость:"
             baseStat={state.intelligence}
             value={state.skills.learnability}
             onChangeHandler={changeSkillHandler}
           />
           <Skill
             name="survival"
-            label="Выживание"
+            label="Выживание:"
             baseStat={state.intelligence}
             value={state.skills.survival}
             onChangeHandler={changeSkillHandler}
           />
           <Skill
             name="medicine"
-            label="Медицина"
+            label="Медицина:"
             baseStat={state.intelligence}
             value={state.skills.medicine}
             onChangeHandler={changeSkillHandler}
           />
           <Skill
             name="intimidation"
-            label="Запугивание"
+            label="Запугивание:"
             baseStat={state.charisma}
             value={state.skills.intimidation}
             onChangeHandler={changeSkillHandler}
           />
           <Skill
             name="discernment"
-            label="Пронициательность"
+            label="Пронициательность:"
             baseStat={state.charisma}
             value={state.skills.discernment}
             onChangeHandler={changeSkillHandler}
           />
           <Skill
             name="appearance"
-            label="Внешний вид"
+            label="Внешний вид:"
             baseStat={state.charisma}
             value={state.skills.appearance}
             onChangeHandler={changeSkillHandler}
           />
           <Skill
             name="manipulation"
-            label="Манипулирование"
+            label="Манипулирование:"
             baseStat={state.charisma}
             value={state.skills.manipulation}
             onChangeHandler={changeSkillHandler}
